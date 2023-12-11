@@ -24,7 +24,7 @@ export default defineManifest({
   },
   content_scripts: [
     {
-      matches: ['http://*/*', 'https://*/*'],
+      matches: ['https://music.yandex.ru/*'],
       js: ['src/contentScript/index.ts'],
     },
   ],
@@ -38,7 +38,4 @@ export default defineManifest({
     },
   ],
   permissions: ['sidePanel', 'storage'],
-  chrome_url_overrides: {
-    newtab: 'newtab.html',
-  },
 })
